@@ -21,13 +21,13 @@ public class PopulaMovimentacoesComCategoria {
 		EntityManager em = emf.createEntityManager();
 
         Categoria categoria1 = new Categoria("Viagem");
-        Categoria categoria2 = new Categoria("NegÛcios");
+        Categoria categoria2 = new Categoria("Neg√≥cios");
 
         Conta conta = em.find(Conta.class, 2L);
 
         Movimentacao movimentacao1 = new Movimentacao();
         movimentacao1.setData(LocalDateTime.now()); // hoje
-        movimentacao1.setDescricao("Viagem ‡ SP");
+        movimentacao1.setDescricao("Viagem √† SP");
         movimentacao1.setTipoMovimentacao(TipoMovimentacao.SAIDA);
         movimentacao1.setValor(new BigDecimal(100.0));
         movimentacao1.setCategorias(Arrays.asList(categoria1));
@@ -35,7 +35,7 @@ public class PopulaMovimentacoesComCategoria {
         movimentacao1.setConta(conta);
 
         Movimentacao movimentacao2 = new Movimentacao();
-        movimentacao2.setData(LocalDateTime.now().plusDays(1)); // amanh„
+        movimentacao2.setData(LocalDateTime.now().plusDays(1)); // amanh√£
         movimentacao2.setDescricao("Viagem ao RJ");
         movimentacao2.setTipoMovimentacao(TipoMovimentacao.SAIDA);
         movimentacao2.setValor(new BigDecimal(300.0));
@@ -45,8 +45,8 @@ public class PopulaMovimentacoesComCategoria {
         
         em.getTransaction().begin();
         
-        em.persist(categoria1); // Agora a 'categoria1' È Managed
-        em.persist(categoria2); // Agora a 'categoria2' È Managed
+        em.persist(categoria1); // Agora a 'categoria1' √© Managed
+        em.persist(categoria2); // Agora a 'categoria2' √© Managed
 
         em.persist(movimentacao1);
         em.persist(movimentacao2);

@@ -18,7 +18,7 @@ public class TestaMediaDiariaDasMovimentacoes {
 		List<Object[]> mediaDasMovimentacoes = query.getResultList();
 		
 		for (Object[] resultado : mediaDasMovimentacoes) {
-			System.out.println("A média das movimentacoes do dia " + resultado[1] + "/" + resultado[2] + " é: " + resultado[0]);
+			System.out.println("A mÃ©dia das movimentacoes do dia " + resultado[1] + "/" + resultado[2] + " Ã©: " + resultado[0]);
 		}
 	}
 }

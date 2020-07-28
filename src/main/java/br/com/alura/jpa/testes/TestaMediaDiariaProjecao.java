@@ -20,7 +20,7 @@ public class TestaMediaDiariaProjecao {
 
 		for (MediaComData resultado : mediaDasMovimentacoes) {
 			System.out.println(
-					"A média das movimentacoes do dia " + resultado.getDia() + "/" + resultado.getMes() + " é: " + resultado.getValor());
+					"A mÃ©dia das movimentacoes do dia " + resultado.getDia() + "/" + resultado.getMes() + " Ã©: " + resultado.getValor());
 		}
 	}
 
